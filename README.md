@@ -1,4 +1,3 @@
-
 # Machine Learning Model Comparison
 
 ## 1. Problem Statement
@@ -9,21 +8,23 @@ The models are evaluated using six performance metrics: Accuracy, AUC Score, Pre
 
 ## 2. Dataset Description
 
-**Dataset:** Breast Cancer Wisconsin (Diagnostic)
-
+**Dataset:** Breast Cancer Wisconsin (Diagnostic)  
 **Source:** UCI Machine Learning Repository
 
 The dataset contains 569 instances and 30 numerical input features computed from digitized images of breast mass samples.
 
 The target variable is `diagnosis`:
+
 - `0` – Benign (B)
 - `1` – Malignant (M)
 
-The dataset contains:
-- 357 benign instances
-- 212 malignant instances
-- 30 numerical features
-- No missing values
+Dataset details:
+
+- Total instances: 569
+- Numerical features: 30
+- Benign instances: 357
+- Malignant instances: 212
+- Missing values: None
 
 The ID column was removed because it is not a predictive feature.
 
@@ -59,26 +60,31 @@ All five models were evaluated on the same held-out test dataset.
 ## 5. Observations
 
 ### Logistic Regression
+
 - Achieved an accuracy of 96.49%.
 - Obtained the highest AUC score of 0.9960.
 - Demonstrated strong overall classification performance.
 
 ### Decision Tree
+
 - Achieved an accuracy of 92.98%.
 - Had the lowest AUC score among the five models.
 - Provides an interpretable decision-making structure.
 
 ### K-Nearest Neighbors
+
 - Achieved an accuracy of 95.61%.
 - Produced strong precision and AUC scores.
 - Feature scaling was applied because KNN relies on distance calculations.
 
 ### Gaussian Naive Bayes
+
 - Achieved 100% precision.
 - Had a recall of 83.33%, indicating that some malignant cases were classified incorrectly.
 - Uses the Gaussian probability assumption for numerical features.
 
 ### Support Vector Machine
+
 - Achieved the highest accuracy of 97.37%.
 - Obtained the highest F1 Score of 0.9630 and MCC of 0.9442.
 - Achieved 100% precision and 92.86% recall.
@@ -88,6 +94,7 @@ All five models were evaluated on the same held-out test dataset.
 Based on the held-out test results, **Support Vector Machine (SVM)** performed best overall.
 
 It achieved:
+
 - Accuracy: 97.37%
 - Precision: 100%
 - Recall: 92.86%
@@ -131,7 +138,8 @@ ML_Model_Comparison/
 │
 ├── data/
 │   ├── breast_cancer.csv
-│   └── train_data.csv
+│   ├── train_data.csv
+│   └── wdbc.names
 │
 ├── model/
 │   ├── logistic_regression.joblib
@@ -148,7 +156,7 @@ ML_Model_Comparison/
 Clone the repository:
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/Amrita955/ML_Model_Comparison.git
 cd ML_Model_Comparison
 ```
 
@@ -178,9 +186,11 @@ streamlit run app.py
 
 ## 10. Repository and Deployment Links
 
-**GitHub Repository:** Add the published GitHub repository URL here.
+**GitHub Repository:**  
+https://github.com/Amrita955/ML_Model_Comparison
 
-**Live Streamlit Application:** Add the deployed Streamlit application URL here.
+**Live Streamlit Application:**  
+https://mlmodelcomparison-weaaqgvr2mpjezvzqu7jdq.streamlit.app/
 
 ## 11. Disclaimer
 
